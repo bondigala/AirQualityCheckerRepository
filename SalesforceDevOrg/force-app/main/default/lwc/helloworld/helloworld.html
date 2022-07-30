@@ -1,0 +1,10 @@
+<template>
+<lightning-card title="helloworld" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+        Apex data : {greetings.data}! <br/>       
+        Java script data : {name}  <br/>      
+    <lightning-input label="Name" value={name} onchange={changeHandler}></lightning-input> <br/>
+    <lightning-button label="Show Toast Message" onclick={ShowToastMessage}></lightning-button>
+</div>
+</lightning-card>
+</template>

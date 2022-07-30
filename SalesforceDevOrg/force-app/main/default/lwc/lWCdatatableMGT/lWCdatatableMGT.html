@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title = "Bondi MGT Summary" icon-name = "custom:custom63"> 
+        <div class = "slds-m-around_medium"> 
+            <template if:true = {MGTDataList}> 
+                <div style="height: 300px;"> 
+                    <lightning-datatable key-field="Id" 
+                                            data={MGTDataList} 
+                                            columns={columns} 
+                                            hide-checkbox-column="true" 
+                                            show-row-number-column="true"> 
+                    </lightning-datatable> 
+                </div>                  
+            </template>
+            <template if:true = {error}> 
+                {error}> 
+            </template> 
+        </div> 
+    </lightning-card> 
+</template>

@@ -1,0 +1,56 @@
+<template>
+  <lightning-card >  
+  <table class="slds-table slds-table--cell-buffer ">
+  <tr class="slds-col" ><td>
+  <lightning-combobox
+  name="Application"
+  label="Application"
+  value={selectedApplication}
+  placeholder="Please Select"
+  options={options}
+  onchange={changeApplication} >
+  </lightning-combobox>
+  </td>
+  <td>
+  <lightning-combobox
+  name="Email Template"
+  label="Email Template"
+  value={selectedTemplate}
+  placeholder="Please Select"
+  options={optionsTemplate}
+  onchange={handleChangeTemplate} >
+  </lightning-combobox>
+  </td></tr>
+  </table>
+  
+  <table class="slds-table slds-table--cell-buffer ">
+    <template if:true={isOther} > 
+    <tr><td>
+      <lightning-input label="Subject" value={emailSubject} placeholder="Please provide email subject" onchange={handleSubject} required>  </lightning-input>
+    </td></tr>
+      <tr class="slds-col" > <td>
+       
+        <lightning-textarea  
+        label="Please Type Email Body" 
+        value={emailBody}      
+        placeholder="compose your tweet"
+        message-when-value-missing="An empty tweet cannot be send." onchange={handleInputChange} required>
+        
+        </lightning-textarea>
+      
+      </td> </tr>
+    </template>
+      </table>
+      h13
+       <table class="slds-table slds-table--cell-buffer" >
+        <tr class="slds-col">
+          <td>
+          <div class="slds-var-m-top_small">
+              <lightning-button variant="brand-outline" label="Send Email" title="Send email" onclick={sendEmailClick} class="slds-m-left_x-small">
+              </lightning-button>
+            </div>
+        </td></tr>
+    </table>
+    
+  </lightning-card>
+  </template>

@@ -1,0 +1,311 @@
+<template>
+
+    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+
+        <!-- <Body background="https://bondicloud-dev-ed--c.ap15.visual.force.com/resource/1608977914000/siteAsset_8a10e10c20bc46eebdf00346170583f3?"> -->
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <img src="https://bondicloud-dev-ed--c.ap15.visual.force.com/resource/1658209838000/callforCodeLogo"
+                        style="height: 156px;" />
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                        <span class="slds-text-heading_medium">Air Quality Summary </span>
+                    </div>
+                </div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Air Quality Category
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.airQualityCategory}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Next Attempt">
+                            <label class="slds-text">
+                                Primary Pollutant
+                            </label>
+                        </th>
+                        <th data-label="Attempt Number" style="bottom:1px">
+                            <p>
+                                <lightning-formatted-text value={airFormData.primaryPollutant} linkify>
+                                </lightning-formatted-text>
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-label="Attempt Number">
+                            <label class="slds-text">
+                                Pollutants
+                            </label>
+                        </th>
+                        <th scope="row" data-label="Current Balance value">
+                            <button
+                                style="background-color: #9DFB9D; color:black; cursor:none; border-style: solid;border-color: transparent;border-radius: 15px;">CO,
+                                NO2 , O3 ,SO2</button>
+                        </th>
+                    </tr>
+
+
+                </table>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                        <span class="slds-text-heading_medium">Carbon Monoxide </span>
+                    </div>
+                </div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Name
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.COname}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Amount
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.COamount}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Unit
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.COunit}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Catogery
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.COcategory}
+                            </p>
+
+                        </th>
+                    </tr>
+                </table>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                        <span class="slds-text-heading_medium">Nitrogen Dioxide </span>
+                    </div>
+                </div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Name
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.NO2name}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Amount
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.NO2amount}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Unit
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.NO2unit}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Catogery
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.NO2category}
+                            </p>
+
+                        </th>
+                    </tr>
+                </table>
+            </lightning-layout-item>
+
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                        <span class="slds-text-heading_medium">Ozone </span>
+                    </div>
+                </div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Name
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.O3name}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Amount
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.O3amount}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Unit
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.O3unit}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Catogery
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.O3category}
+                            </p>
+
+                        </th>
+                    </tr>
+                </table>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                        <span class="slds-text-heading_medium">Sulfur Dioxide </span>
+                    </div>
+                </div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Name
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.SO2name}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Amount
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.SO2amount}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Unit
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.SO2unit}
+                            </p>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-label="Balance">
+                            <label class="slds-text">
+                                Catogery
+                            </label>
+                        </th>
+                        <th data-label="Air Quality Category">
+                            <p>
+                                {airFormData.SO2category}
+                            </p>
+
+                        </th>
+                    </tr>
+                </table>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </div>
+
+</template>

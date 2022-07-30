@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title = "Picklist demo" icon-name = "custom:custom63"> 
+        <label for="FieldSelect" class="slds-form-element__label slds-no-flex">
+            <abbr title="required" class="slds-required">* Options</abbr>
+        </label>
+        <select class="slds-select" name = "optionSelect" onchange={changeHandler} >
+            <option value="OPTION A">OPTION A</option>
+            <option value="OPTION B">OPTION B</option>
+        </select> 
+        <br/>
+        <lightning-combobox
+               name="progress"
+               label="Status"
+               value={value}
+               placeholder="Select Progress"
+               options={options}
+               onchange={handleChange} >
+   </lightning-combobox>
+   <p>Selected value is: {value}</p>
+</lightning-card>
+    </template>

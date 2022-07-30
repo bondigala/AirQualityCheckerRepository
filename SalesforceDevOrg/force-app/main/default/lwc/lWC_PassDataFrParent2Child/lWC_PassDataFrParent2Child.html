@@ -1,0 +1,25 @@
+<template>
+<lightning-card title =" LWC_PassdataFrParent2Child" > Hellow TEST
+<div class="slds-m-around_small" onsimplebubble={bubbleEvtFire} >
+   <!-- <template if:true={contacts}>
+        <p>Data pased from parent 2 child comp as parameters</p>
+       
+        
+           
+    <template for:each={contacts} for:item="con">  
+    
+        
+    <c-lwcchildgetdatafrompant contact={con} key={con.id} >  </c-lwcchildgetdatafrompant>
+
+                    </template>
+    </template> -->
+   <c-lwcchildgetdatafrompant></c-lwcchildgetdatafrompant>
+</div>
+
+
+<div oncensusdmlevt={censusDMLStatus} ></div> 
+ <lightning-button variant="brand-outline" label="CENSUSDML" title="FireEvent" onclick={handleEvent} class="slds-m-left_x-small" ></lightning-button> 
+ <!--   <c-hznbpcensusdml></c-hznbpcensusdml> -->
+    
+</lightning-card>
+</template>

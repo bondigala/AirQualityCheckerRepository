@@ -1,0 +1,20 @@
+<template>
+<lightning-card >  
+<table class="slds-table slds-table--cell-buffer ">
+  <tr class="slds-col" >
+    <td>
+    hznbp censusdml 
+  </td> 
+  </tr>
+  <tr>
+      <td> <lightning-input type="date" label="Hire Date" onchange={dateUpdated} value={newEmployeeFormObject.HireDate} name="HireDate" date-style="short" placeholder="MM/DD/YYYY" class="clsHireDate employeeField slds-m-right_xx-small slds-m-left_xx-small" message-when-bad-input ="Please enter valid date(MM/DD/YYYY)." disabled={shallDisable} autocomplete="off"></lightning-input></td>
+      <td> 
+      <lightning-input type="date" label="DOB" onchange={dateUpdated} value={newEmployeeFormObject.DOB} name="DOB" date-style="short" placeholder="MM/DD/YYYY" class="clsDOB employeeField slds-m-right_xx-small slds-m-left_xx-small" message-when-bad-input ="Please enter valid date(MM/DD/YYYY)." disabled={shallDisable} autocomplete="off"></lightning-input>
+     </td>
+  </tr>
+</table>
+
+
+</lightning-card >  
+<lightning-button variant="brand-outline" label="Add" title="FireEvent" onclick={handleEvent} class="slds-m-left_x-small" ></lightning-button>
+</template>

@@ -1,0 +1,67 @@
+<template>
+    <lightning-layout horizontal-align="center">
+    <lightning-layout-item>
+        <div  >
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                <span class="slds-text-heading_medium">Submit Leave </span>
+            </div> 
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+
+                <tr>
+                    <th>
+                        <label class="slds-text" > Name  </label>
+                    </th>
+                    <th >                           
+                        <lightning-input type="text" value={leaveInfo.EmployeeName__c} ></lightning-input>                        
+                    </th>
+                </tr>
+                <tr>
+                    <th >
+                        <label class="slds-text" > From Date  </label>
+                    </th>
+                    <th >                                   
+                        <lightning-input type="date"  value={leaveInfo.From_Date__c} >   </lightning-input>
+                    </th>
+                </tr>
+                <tr>
+                    <th >
+                        <label class="slds-text" >End Date     </label>
+                    </th>
+                    <th >                     
+                        <lightning-input type="date"  value={leaveInfo.End_Date__c} >   </lightning-input>
+                    </th>
+                </tr>      
+                <tr>
+                    <th >
+                        <label class="slds-text" > Line Manager    </label>
+                    </th>
+                    <th >             
+                        <lightning-input type="text" value={leaveInfo.Line_Manager__c} >    </lightning-input>                      
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="slds-text" >  Leave Type   </label>
+                    </th>
+                    <th>  
+                        <lightning-input  type="text" value={leaveInfo.Leave_Type__c}> </lightning-input>
+                    </th>
+                </tr> 
+                <tr>
+                    <th>
+                        <label class="slds-text" >  Discription   </label>
+                    </th>
+                    <th>  
+                        <lightning-input-rich-text rows="2" value={leaveInfo.Name} > </lightning-input-rich-text>
+                    </th>
+                </tr>
+                <tr>          
+                    <th>                          
+                     <lightning-button label="Save"  onclick={submitLeave} class="slds-m-left_x-small"></lightning-button>
+                    </th>
+                </tr> 
+            </table>      
+        </div>
+    </lightning-layout-item>
+    </lightning-layout>
+    </template>
